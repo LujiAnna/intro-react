@@ -32,12 +32,19 @@ When you’re ready to deploy to production, running npm run build will create a
 
 - [x] Publish the source code on your GitHub repository
 - [ ] Build a Todo App with React.js (Check out this useful instructions ) . CRUD
+     - [x] Create: Add text as a form input
+        - [x] Components: import, export, import {Component} from 'React'. Error Todo is not defined. https://stackoverflow.com/questions/44441734/react-js-error-is-not-defined-react-jsx-no-undef/48487955
+        - [x] React Developer Tools
+     - [ ] Read: Show input text in browser
+     - [ ] Update: Change text in browser
+     - [ ] Delete: Delete text from browser
 - [ ] Save your todo's, even after starting the browser again
 - [ ] Deploy the project on a live server Tip if you choose Netlify: to deploy a React app you first run the command npm run build, and once the command finishes you will have your app ready in the build folder: just drag and drop this folder in Netlify and you are done. Easy!
 
 
 🌼 Nice-to-have (doable)
-- [ ] Refactor parts you aren't happy with.
+- [ ] Refactor. 
+     - [ ] use ES6 arrow functions
 - [ ] Rebuild from scratch without any tutorial to improve your understanding (Instructions will be of a big help here!).
 - [ ] Improve on your project so that it's not only a learning repository, but also a show off project when interviewing:
 - [ ] Add styling

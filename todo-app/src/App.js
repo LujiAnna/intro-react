@@ -1,11 +1,14 @@
 // import logo from './logo.svg';
+import React, {Component} from 'react'
+import ReactDOM from 'react-dom' 
 import './App.css';
+import Todo from './Components/Todo.js';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+      {/* <header className="App-header">
         <h1>Write your todo</h1>
         <p>
         React App
@@ -18,7 +21,8 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+          <Todo name="Anna" />
     </div>
   );
 }
