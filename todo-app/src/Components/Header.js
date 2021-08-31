@@ -11,7 +11,7 @@ import ReactDOM from 'react-dom'
 
 // Now that data is being passed through to h1, 
 // we have to work on accessing it from the other side.
-function Header(props) {
+const Header = (props) => {
   return (
     <header>
      <h1>Hello, {props.name}</h1>   

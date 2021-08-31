@@ -7,7 +7,7 @@ import Form from './Components/Form.js';
 import Header from './Components/Header.js';
 
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       {/* <header className="App-header">

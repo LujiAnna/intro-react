@@ -35,6 +35,16 @@ When you’re ready to deploy to production, running npm run build will create a
      - [x] Create: Add text as a form input
         - [x] Components: import, export, import {Component} from 'React'. Error Todo is not defined. https://stackoverflow.com/questions/44441734/react-js-error-is-not-defined-react-jsx-no-undef/48487955
         - [x] React Developer Tools
+        - [x] Props/properties to handle data. Props are basically kind of global variable or object. Passing and Accessing props. We can pass props to any component as we declare attributes for any HTML tag. Access - this.props.propName; ‘this.props’ is a kind of global object which stores all of a components props. The propName, that is the names of props are keys of this object. to access a prop from a function we do not need to use the ‘this’ keyword anymore. Functional components accept props as parameters and can be accessed directly- props.propName
+        - [!] default props: https://www.geeksforgeeks.org/reactjs-props-set-2/ The defaultProps is a method that we can use to store as much information as we want for a particular class. And this information can be accessed from anywhere inside that particular class. Every piece of information you add inside the defaultProps, will be added as the prop of that class
+        - [] State. With props, we have a one way data flow, but with state we can update private data from a component. You can think of state as any data that should be saved and modified without necessarily being added to a database - for example, adding and removing items from a shopping cart before confirming your purchase.
+        The state is an instance of React Component Class can be defined as an object of a set of observable properties that control the behavior of the component. In other words, the State of a component is an object that holds some information that may change over the lifetime of the component.
+        In props there is rendering but in state there's storing the value of time as a member of the component’s state.
+        Props Vs State:
+        Props are immutable i.e. once set the props cannot be changed, while State is an observable object that is to be used to hold data that may change over time and to control the behavior after each change.
+        States can only be used in Class Components while Props don’t have this limitation.
+        While Props are set by the parent component, State is generally updated by event handlers. https://www.simplilearn.com/tutorials/reactjs-tutorial/reactjs-state
+        - [!] Controlled component
      - [ ] Read: Show input text in browser
      - [ ] Update: Change text in browser
      - [ ] Delete: Delete text from browser
@@ -45,8 +55,7 @@ When you’re ready to deploy to production, running npm run build will create a
 🌼 Nice-to-have (doable)
 - [ ] Refactor. 
      - [ ] use ES6 arrow functions
-- [ ] Rebuild from scratch without any tutorial to improve your understanding (Instructions will be of a big help here!).
-- [ ] Improve on your project so that it's not only a learning repository, but also a show off project when interviewing:
+     - [ ] [tutorials](https://github.com/becodeorg/gnt-verou-2/tree/main/3.The-Mountain/12.React/2.Extra-Documentation)
 - [ ] Add styling
 - [ ] Improve responsiveness
 - [ ] Check for little, smooth effects
