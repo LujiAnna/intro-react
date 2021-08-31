@@ -11,16 +11,12 @@ import ReactDOM from 'react-dom'
 
 // Now that data is being passed through to h1, 
 // we have to work on accessing it from the other side.
-function Todo() {
+function Header(props) {
   return (
-    <div className="container">
-     <ul className="todoList">
-     <li>Go to the park</li>
-     <li>Take a rest</li>
-     <li>Do Yoga</li>
-     </ul>    
-    </div>
+    <header>
+     <h1>Hello, {props.name}</h1>   
+    </header>
   );
 }
 
-export default Todo;
+export default Header;

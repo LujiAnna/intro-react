@@ -3,6 +3,8 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom' 
 import './App.css';
 import Todo from './Components/Todo.js';
+import Form from './Components/Form.js';
+import Header from './Components/Header.js';
 
 
 function App() {
@@ -22,7 +24,10 @@ function App() {
           Learn React
         </a>
       </header> */}
-          <Todo name="Anna" />
+          <Header name="Anna" />
+          <Todo />
+          <Form />
+
     </div>
   );
 }

@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import '../App.css';
+// import './App.css';
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 
@@ -11,16 +11,19 @@ import ReactDOM from 'react-dom'
 
 // Now that data is being passed through to h1, 
 // we have to work on accessing it from the other side.
-function Todo() {
+function Form() {
   return (
     <div className="container">
-     <ul className="todoList">
-     <li>Go to the park</li>
-     <li>Take a rest</li>
-     <li>Do Yoga</li>
-     </ul>    
+            <form>
+  <label>
+    <input type="text" name="todo" placeholder="New Todo"/>
+  </label>
+  <input type="submit" value="Save" />
+</form>
+
+       
     </div>
   );
 }
 
-export default Todo;
+export default Form;
