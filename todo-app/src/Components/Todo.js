@@ -1,12 +1,10 @@
 // import logo from './logo.svg';
 import '../App.css';
-import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react'
 
 //  Add data
 // First: Hard code
 // Second: Use Default Component: https://blog.logrocket.com/a-complete-guide-to-default-props-in-react-984ea8e6972d/
-
 
 // Now that data is being passed through to Todo, 
 // we have to work on accessing it from the other(this) side. {props.todos}
@@ -21,15 +19,18 @@ const Todo = (props) => {
 //  and map through the array to return a list row 
 // for each object in the array. 
 // This map will be contained in the rows variable, which we'll return as an expression.
+     
+    // always use keys when making lists in React, as they help identify each list item. 
+    // We'll also see how this is necessary in a moment when we want to manipulate list items. 
       const rows = props.todosData.map((row, index) => {
        return (
-         <>
-<li>{row.todo}
-{row.completed}</li>
-</>
-       );
-        
-  })
+         <tr key ={index}>
+           <td>{row.todo}</td>
+           <td>{row.completed}</td>
+           <td><button>Clear</button></td>
+           </tr>
+       );     
+      })
 
 // console.log(props);
 // console.log(props.todos); // undefined
@@ -37,7 +38,7 @@ const Todo = (props) => {
 console.log(props.todosData);
 
   return (
-    <ul className="container">
+    <table className="container todoList">
   {rows}
 
         {/* <p>{props.todosData}</p> */}
@@ -48,7 +49,7 @@ console.log(props.todosData);
      <li>Take a rest</li>
      <li>Do Yoga</li>
      </ul>     */}
-    </ul>
+    </table>
   );
 }
 
@@ -64,7 +65,6 @@ console.log(props.todosData);
 // why not todosData instead of todos???
 
 export default Todo;
-
 
 // If you view the front end of the app, all the data is loading in now.
 

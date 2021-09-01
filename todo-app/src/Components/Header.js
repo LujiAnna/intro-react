@@ -1,7 +1,6 @@
 // import logo from './logo.svg';
 import '../App.css';
-import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react'
 
 //  pass the data through to the child component (h1) with properties,
 //  kind of how you might pass data through using data- attributes. 

@@ -1,6 +1,5 @@
 // import logo from './logo.svg';
-import React, {Component} from 'react'
-import ReactDOM from 'react-dom' 
+import React,  {useState} from 'react';
 import './App.css';
 import Todo from './Components/Todo.js';
 import Form from './Components/Form.js';
@@ -21,23 +20,16 @@ const App = () => {
   // create state object
   // The object will contain properties for everything you want to 
   // store in the state. For us, it's todos.
-  // state = {
-  //   todos: [
-  //     {
-  //       todo: 'Make Tea',
-  //       completed: true,
-  //     },
-  //      {
-  //       todo: 'Make Fries',
-  //       completed: false,
-  //     },
-  //      {
-  //       todo: 'Make Form',
-  //       completed: true,
-  //     }, 
-  //   ]
-  // }
-    const todos = [
+
+  // Declare a new state variable, which we'll call "todos"
+
+  // useState is a new way to use the exact same capabilities that this.state provides in a class.
+  //  Normally, variables “disappear” when the function exits but state variables are preserved by React.
+  
+  // Our data is officially contained in the state. 
+  // Since we want to be able to remove a todo from the table, we're going to create a removeTodo method on the parent App class.
+  // setTodos is a function to update todos (a built-in method for manipulating state)
+  const [todos, setTodos] = useState([
       {
         todo: 'Make Tea',
         completed: true,
@@ -50,13 +42,28 @@ const App = () => {
         todo: 'Make Form',
         completed: true,
       }, 
-    ]
+    ]);
+  
+    // const todos = [
+    //   {
+    //     todo: 'Make Tea',
+    //     completed: true,
+    //   },
+    //    {
+    //     todo: 'Make Fries',
+    //     completed: false,
+    //   },
+    //    {
+    //     todo: 'Make Form',
+    //     completed: true,
+    //   }, 
+    // ]
   return (
     <div className="App">
           <Header name="Anna" />
+          {/* Display/Read state */}
           <Todo todosData = {todos} />
           <Form />
-
     </div>
   );
 }

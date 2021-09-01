@@ -1,7 +1,6 @@
 // import logo from './logo.svg';
 // import './App.css';
-import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react'
 
 //  Add Form
 const Form = () => {
