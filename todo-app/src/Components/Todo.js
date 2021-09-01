@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
+import React,  {useState} from 'react';
 import '../App.css';
-import React from 'react'
 
 //  Add data
 // First: Hard code
@@ -12,8 +12,11 @@ import React from 'react'
 // Create a parameter variable that contains props
 // pass it through to the Todo, once again through props.
 const Todo = (props) => {
+
+  // const [todos, removeTodo] = useState();
 // const {todosData} = props;
 // const {...restProps} = props;
+
 
 // pass the props through as a parameter,
 //  and map through the array to return a list row 
@@ -22,15 +25,24 @@ const Todo = (props) => {
      
     // always use keys when making lists in React, as they help identify each list item. 
     // We'll also see how this is necessary in a moment when we want to manipulate list items. 
+     
+     
+    //  Since we're passing it down to Todo, we're going to have to pass it through again as a prop,
+    //  just like we did with the todosData.
       const rows = props.todosData.map((row, index) => {
        return (
          <tr key ={index}>
            <td>{row.todo}</td>
            <td>{row.completed}</td>
-           <td><button>Clear</button></td>
+           {/* when button click, remove specific (index) entrance */}
+           {/* pass the key/index through as a parameter, so the filter function knows which item to remove. We'll create a button with an onClick and pass it through. */}
+           {/* <td><button onClick={() => console.log("test")}>Clear</button></td> */}
+            <td><button onClick={() => props.removeTodo(index)}>Clear</button></td>
            </tr>
        );     
       })
+
+
 
 // console.log(props);
 // console.log(props.todos); // undefined

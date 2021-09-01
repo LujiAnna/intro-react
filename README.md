@@ -53,20 +53,26 @@ When you’re ready to deploy to production, running npm run build will create a
         When would I use a Hook? If you write a function component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing function component. https://reactjs.org/docs/hooks-rules.html
         What do we pass to useState as an argument? The only argument to the useState() Hook is the initial state. Unlike with classes, the state doesn’t have to be an object. We can keep a number or a string if that’s all we need. if for example, we just want a number for how many times the user clicked, we pass 0 as initial state for our variable. (If we wanted to store two different values in state, we would call useState() twice.)
         What does useState return? It returns a pair of values: the current state and a function that updates it. This is why we write const [count, setCount] = useState(). This is similar to this.state.count and this.setState in a class, except you get them in a pair. Hook names always start with use
+        - [ ] Effect Hook: 
         - [!] Controlled component
      - [ ] Read: Show input text in browser
      - [ ] Update: Change text in browser
      - [ ] Delete: Delete text from browser
+       - [x] Handling Events: https://reactjs.org/docs/handling-events.html
+          - React events are named using camelCase, rather than lowercase.
+          - JSX you pass a function as the event handler, rather than a string.
+          - When using React, you generally don’t need to call addEventListener to add listeners to a DOM element after it is created. Instead, just provide a listener when the element is initially rendered.
 - [ ] Save your todo's, even after starting the browser again
 - [ ] Deploy the project on a live server Tip if you choose Netlify: to deploy a React app you first run the command npm run build, and once the command finishes you will have your app ready in the build folder: just drag and drop this folder in Netlify and you are done. Easy!
 
 
 🌼 Nice-to-have (doable)
-- [ ] Refactor. 
-     - [ ] use ES6 arrow functions
+- [x] Refactor. 
+     - [x] use ES6 arrow functions
+     - [ ] use map, filter, reduce, 
      - [ ] [tutorials](https://github.com/becodeorg/gnt-verou-2/tree/main/3.The-Mountain/12.React/2.Extra-Documentation)
-- [ ] Add styling
-- [ ] Improve responsiveness
+- [x] Add styling
+- [x] Improve responsiveness
 - [ ] Check for little, smooth effects
 - [ ] Think UX: what extra features can make your todo app better?
 

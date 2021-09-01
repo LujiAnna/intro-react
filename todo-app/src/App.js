@@ -29,6 +29,9 @@ const App = () => {
   // Our data is officially contained in the state. 
   // Since we want to be able to remove a todo from the table, we're going to create a removeTodo method on the parent App class.
   // setTodos is a function to update todos (a built-in method for manipulating state)
+  
+   // Declare multiple state variables!
+  
   const [todos, setTodos] = useState([
       {
         todo: 'Make Tea',
@@ -58,11 +61,36 @@ const App = () => {
     //     completed: true,
     //   }, 
     // ]
+
+    // remove entrance from browser and DOM
+    // You must use *setTodos() to modify an array using filter. 
+    // Simply applying a new value to state.property will not work
+      const removeTodo = (index) => {
+        console.log('You have clicked clear button');
+        // const [todos, setTodos] = useState(); 
+        // remove
+        // *filter method: does not mutate but rather creates a new array,
+        //  and is a preferred method for modifying arrays in JavaScript. 
+        // This particular method is testing an index vs. all the indices in the array, 
+        // and returning all but the one that is passed through
+        // modify-update state using setTodos inbuit method
+
+      // setTodos({
+      // todos: todos.filter((todo, i) => {
+      //    return i !== index
+      // }),
+      // })
+
+      }
+
+// Now we have to pass removeTodo function through to the component,
+//  and render a button next to each character that can invoke the function. 
+// We'll pass the removeTodo function through as a prop to Todo.
   return (
     <div className="App">
           <Header name="Anna" />
           {/* Display/Read state */}
-          <Todo todosData = {todos} />
+          <Todo todosData = {todos} removeTodo={removeTodo} />
           <Form />
     </div>
   );
