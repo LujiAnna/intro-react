@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import React,  {useState} from 'react';
+import React,  {useState, useEffect} from 'react';
 import './App.css';
 import Todo from './Components/Todo.js';
 import Form from './Components/Form.js';
@@ -31,21 +31,25 @@ const App = () => {
   // setTodos is a function to update todos (a built-in method for manipulating state)
   
    // Declare multiple state variables!
+  //  remove all the hard-coded data from useState, as we'll be updating that through the form now.
+  // create form component
+
+  const [todos, setTodos] = useState([]);
   
-  const [todos, setTodos] = useState([
-      {
-        todo: 'Make Tea',
-        completed: true,
-      },
-       {
-        todo: 'Make Fries',
-        completed: false,
-      },
-       {
-        todo: 'Make Form',
-        completed: true,
-      }, 
-    ]);
+  // const [todos, setTodos] = useState([
+  //     {
+  //       todo: 'Make Tea',
+  //       completed: true,
+  //     },
+  //      {
+  //       todo: 'Make Fries',
+  //       completed: false,
+  //     },
+  //      {
+  //       todo: 'Make Form',
+  //       completed: true,
+  //     }, 
+  //   ]);
   
     // const todos = [
     //   {
@@ -73,14 +77,14 @@ const App = () => {
         //  and is a preferred method for modifying arrays in JavaScript. 
         // This particular method is testing an index vs. all the indices in the array, 
         // and returning all but the one that is passed through
-        // modify-update state using setTodos inbuit method
+        // modify-update state using setTodos inbuilt method
 
-      // setTodos({
-      // todos: todos.filter((todo, i) => {
-      //    return i !== index
-      // }),
-      // })
-
+// ERROR: removes all
+      setTodos({
+      todos: todos.filter((todo, i) => {
+         return i !== index
+      }),
+      })
       }
 
 // Now we have to pass removeTodo function through to the component,

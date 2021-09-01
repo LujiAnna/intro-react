@@ -28,8 +28,14 @@ const Todo = (props) => {
      
      
     //  Since we're passing it down to Todo, we're going to have to pass it through again as a prop,
-    //  just like we did with the todosData.
-      const rows = props.todosData.map((row, index) => {
+    //  just like we did with the todosData(changed to todos)
+
+// todosData was an array of objects but now its an object after using state
+    // https://stackoverflow.com/questions/30142361/react-js-uncaught-typeerror-this-props-data-map-is-not-a-function
+      
+      let data = Array.from(props.todosData);
+
+      const rows = data.map((row, index) => {
        return (
          <tr key ={index}>
            <td>{row.todo}</td>
