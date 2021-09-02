@@ -9,6 +9,7 @@ build a small Todo application that lives in your browser, and saves todos even 
 
 
 🌱 Must-have's
+<<<<<<< HEAD:READMEREACT.md
 - [x] Read this [docs](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app)
 - [x] Create a React application and run it locally on your browser (hint-hint: start here)
 ```
@@ -66,6 +67,12 @@ When you’re ready to deploy to production, running npm run build will create a
   - [ ] Submitting Form Data
 - [ ] Deploy the project on a live server Tip if you choose Netlify: to deploy a React app you first run the command npm run build, and once the command finishes you will have your app ready in the build folder: just drag and drop this folder in Netlify and you are done. Easy!
 
+=======
+- Publish the source code on your GitHub repository
+- Build a Todo App with React.js (Check out this useful instructions )
+- Save your todo's, even after starting the browser again
+- Deploy the project on a live server Tip if you choose Netlify: to deploy a React app you first run the command npm run build, and once the command finishes you will have your app ready in the build folder: just drag and drop this folder in Netlify and you are done. Easy!
+>>>>>>> 24886c95d9eb06c99d7f5b14eba4c6dde06c1c4a:README.md
 
 🌼 Nice-to-have (doable)
 - [x] Refactor. 
