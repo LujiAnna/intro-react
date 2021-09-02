@@ -34,22 +34,22 @@ const App = () => {
   //  remove all the hard-coded data from useState, as we'll be updating that through the form now.
   // create form component
 
-  // const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([]);
   
-  const [todos, setTodos] = useState([
-      {
-        todo: 'Make Tea',
-        completed: true,
-      },
-       {
-        todo: 'Make Fries',
-        completed: false,
-      },
-       {
-        todo: 'Make Form',
-        completed: true,
-      }, 
-    ]);
+  // const [todos, setTodos] = useState([
+  //     {
+  //       todo: 'Make Tea',
+  //       completed: true,
+  //     },
+  //      {
+  //       todo: 'Make Fries',
+  //       completed: false,
+  //     },
+  //      {
+  //       todo: 'Make Form',
+  //       completed: true,
+  //     }, 
+  //   ]);
   
     // const todos = [
     //   {
@@ -91,12 +91,28 @@ const App = () => {
 
 // update the state by taking the existing todos 
   // and adding the new todo parameter, using the ES6 spread operator.
+
+ // console.log(todos); // now it's an empty array []
+
+  // // console.log([... todos, 3]); // [3]
+ //  console.log(... todos, 3); // 3
+
+ // console.log(setTodos([... todos, 3])); // undefined
+  // console.log(setTodos([... todos, 3])); //  undefined
+ // console.log(setTodos({todo: [... todos, 3]})); // TypeError: todos is not iterable
+
+  // Aim to add as array of objects
+
    const addTodoInput = (inputTodo) => {
-        setTodos({todos: [... todos, inputTodo]})
+     console.log(inputTodo); // hey
+    //  let x = [... todos, inputTodo];
+    //  console.log(x); // ['hey']
+        // setTodos({todo: [... todos, inputTodo]})
+        // console.log(setTodos([... todos, inputTodo])); //undefined
+        // console.log(setTodos(x)); //undefined
+        setTodos([... todos, inputTodo]);
   }
-  // make sure we pass that through as a parameter on Form.
-
-
+  // make sure we pass this method through as a parameter on Form.
 
 // Now we have to pass removeTodo function through to the component,
 //  and render a button next to each character that can invoke the function. 
@@ -106,6 +122,7 @@ const App = () => {
           <Header name="Anna" />
           {/* Display/Read state */}
           <Todo todosData = {todos} removeTodo={removeTodo} />
+          {/* addTodoInput={addTodoInput} */}
           <Form addTodoInput={addTodoInput} />
     </div>
   );

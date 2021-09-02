@@ -33,9 +33,9 @@ const Todo = (props) => {
 // todosData was an array of objects but now its an object after using state
     // https://stackoverflow.com/questions/30142361/react-js-uncaught-typeerror-this-props-data-map-is-not-a-function
     // console.log(props);
-    let data = Array.from(props.todosData);
+    // let data = Array.from(props.todosData);
 
-      const rows = data.map((row, index) => {
+      const rows = props.todosData.map((row, index) => {
        return (
          <tr key ={index}>
            <td>{row.todo}</td>
