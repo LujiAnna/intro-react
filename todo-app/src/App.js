@@ -34,22 +34,22 @@ const App = () => {
   //  remove all the hard-coded data from useState, as we'll be updating that through the form now.
   // create form component
 
-  const [todos, setTodos] = useState([]);
+  // const [todos, setTodos] = useState([]);
   
-  // const [todos, setTodos] = useState([
-  //     {
-  //       todo: 'Make Tea',
-  //       completed: true,
-  //     },
-  //      {
-  //       todo: 'Make Fries',
-  //       completed: false,
-  //     },
-  //      {
-  //       todo: 'Make Form',
-  //       completed: true,
-  //     }, 
-  //   ]);
+  const [todos, setTodos] = useState([
+      {
+        todo: 'Make Tea',
+        completed: true,
+      },
+       {
+        todo: 'Make Fries',
+        completed: false,
+      },
+       {
+        todo: 'Make Form',
+        completed: true,
+      }, 
+    ]);
   
     // const todos = [
     //   {
@@ -70,7 +70,8 @@ const App = () => {
     // You must use *setTodos() to modify an array using filter. 
     // Simply applying a new value to state.property will not work
       const removeTodo = (index) => {
-        console.log('You have clicked clear button');
+        // console.log('You have clicked clear button');
+        console.log(index);
         // const [todos, setTodos] = useState(); 
         // remove
         // *filter method: does not mutate but rather creates a new array,
@@ -78,14 +79,24 @@ const App = () => {
         // This particular method is testing an index vs. all the indices in the array, 
         // and returning all but the one that is passed through
         // modify-update state using setTodos inbuilt method
-
-// ERROR: removes all
-      setTodos({
-      todos: todos.filter((todo, i) => {
-         return i !== index
-      }),
-      })
+        console.log(todos.filter((todo, i) => {
+            return i !== index
+            }));
+       // ERROR: removes all
+          setTodos(todos.filter((todo, i) => {
+            return i !== index
+           }),
+          )
       }
+
+// update the state by taking the existing todos 
+  // and adding the new todo parameter, using the ES6 spread operator.
+   const addTodoInput = (inputTodo) => {
+        setTodos({todos: [... todos, inputTodo]})
+  }
+  // make sure we pass that through as a parameter on Form.
+
+
 
 // Now we have to pass removeTodo function through to the component,
 //  and render a button next to each character that can invoke the function. 
@@ -95,7 +106,7 @@ const App = () => {
           <Header name="Anna" />
           {/* Display/Read state */}
           <Todo todosData = {todos} removeTodo={removeTodo} />
-          <Form />
+          <Form addTodoInput={addTodoInput} />
     </div>
   );
 }

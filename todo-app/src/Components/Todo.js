@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import React,  {useState} from 'react';
+import React from 'react';
 import '../App.css';
 
 //  Add data
@@ -13,7 +13,7 @@ import '../App.css';
 // pass it through to the Todo, once again through props.
 const Todo = (props) => {
 
-  // const [todos, removeTodo] = useState();
+ // const [todos, removeTodo] = useState();
 // const {todosData} = props;
 // const {...restProps} = props;
 
@@ -32,8 +32,8 @@ const Todo = (props) => {
 
 // todosData was an array of objects but now its an object after using state
     // https://stackoverflow.com/questions/30142361/react-js-uncaught-typeerror-this-props-data-map-is-not-a-function
-      
-      let data = Array.from(props.todosData);
+    // console.log(props);
+    let data = Array.from(props.todosData);
 
       const rows = data.map((row, index) => {
        return (
@@ -53,7 +53,7 @@ const Todo = (props) => {
 // console.log(props);
 // console.log(props.todos); // undefined
 // call the prop Name NOT value
-console.log(props.todosData);
+// console.log(props.todosData);
 
   return (
     <table className="container todoList">
