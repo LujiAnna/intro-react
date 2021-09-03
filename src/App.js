@@ -7,16 +7,21 @@ import Header from './Components/Header.js';
 const App = () => {
   const [todos, setTodos] = useState([]);
       const removeTodo = (index) => {    
-        console.log(todos.filter((todo, i) => {
-            return i !== index
-            }));
+        // remove from local storage as well
+        // localStorage.removeItem(index);
           setTodos(todos.filter((todo, i) => {
             return i !== index
            }),
           )
       }
 
+      
+
    const addTodoInput = (inputTodo) => {
+    
+    //  Start adding ones from local storage
+    // const cat = localStorage.getItem([todos]);
+        // setTodos([... cat, inputTodo]);
         setTodos([... todos, inputTodo]);
   }
  
