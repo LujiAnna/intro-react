@@ -8,7 +8,7 @@ const App = () => {
   const [todos, setTodos] = useState([]);
       const removeTodo = (index) => {    
         // remove from local storage as well
-        // localStorage.removeItem(index);
+        localStorage.removeItem(index);
           setTodos(todos.filter((todo, i) => {
             return i !== index
            }),
