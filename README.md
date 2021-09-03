@@ -1,35 +1,70 @@
-# intro-react
+# Getting Started with Create React App
 
-build a small Todo application that lives in your browser, and saves todos even after restarting the browser.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- be able to create a new React application
-- be able to "think in React"
-- be able to use basic hooks for managing state and reactivity
-- be able to organize your app in components
+## Available Scripts
 
+In the project directory, you can run:
 
-🌱 Must-have's
-- [x] Publish the source code on your GitHub repository
-- [x] Build a Todo App with React.js (Check out this useful instructions )
-- [ ] Save your todo's, even after starting the browser again
-- [ ] Deploy the project on a live server Tip if you choose Netlify: to deploy a React app you first run the command npm run build, and once the command finishes you will have your app ready in the build folder: just drag and drop this folder in Netlify and you are done. Easy!
+### `yarn start`
 
-🌼 Nice-to-have (doable)
-- [x] Refactor. 
-     - [x] use ES6 arrow functions
-     - [ ] use map, filter, reduce, 
-     - [ ] [tutorials](https://github.com/becodeorg/gnt-verou-2/tree/main/3.The-Mountain/12.React/2.Extra-Documentation)
-- [x] Add styling
-- [x] Improve responsiveness
-- [ ] Check for little, smooth effects
-- [ ] Think UX: what extra features can make your todo app better?
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-🌳 Nice-to-have (hard)
-- [ ] Install a react package of a calendar and implement it in a new component into your App.
-- [ ] Install and use React-router-dom as a router between components. (Hint: Think about a structure like: router -> show component)
-- [ ] Have a live edit option for existing todo's (when you click on the text of a todo, the app allows you to edit it in place).
-- [ ] Make a version with another JS framework like VueJS or Svelte.
+### `yarn test`
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `yarn build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
