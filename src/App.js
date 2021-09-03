@@ -1,4 +1,4 @@
-import React,  {useState, useEffect} from 'react';
+import React,  {useState} from 'react';
 import './App.css';
 import Todo from './Components/Todo.js';
 import Form from './Components/Form.js';
@@ -15,14 +15,25 @@ const App = () => {
           )
       }
 
-      
-
    const addTodoInput = (inputTodo) => {
-    
+    // Read local storage item 
     //  Start adding ones from local storage
-    // const cat = localStorage.getItem([todos]);
-        // setTodos([... cat, inputTodo]);
-        setTodos([... todos, inputTodo]);
+    // keyname 0, 1, 
+    console.log('inputTodo: ', inputTodo);
+
+    const iterator = todos.keys();
+
+    for (const key of iterator) {
+          //localStorage is an object, so values are stored by key name
+          // console.log(key);
+         const storeItem = localStorage.getItem(key);
+        //data from localStorage is always stored in strings
+         console.log('storeItem: ', storeItem);
+              
+        // TODO: Retrieve localstorage items on page refresh
+        // todos.push(Array.from(cat));
+    }
+        setTodos([...todos, inputTodo]);
   }
  
   return (

@@ -12,10 +12,6 @@ const Form = (props) => {
 
   const handleChange = (e) => {
     const {key, value} = e.target;
-     console.log(setInput({
-        todo: value
-     })) 
-
    setInput({
         todo: value
      })

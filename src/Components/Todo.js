@@ -4,8 +4,8 @@ import '../App.css';
 const Todo = (props) => {
       const rows = props.todosData.map((row, index) => {
         //  Add to local storage
-        console.log(row.todo);
-        console.log(index);
+        // console.log(row.todo);
+        // console.log(index);
         localStorage.setItem(index, row.todo);
        return (
          <tr key ={index}>
